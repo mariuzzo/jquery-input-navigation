@@ -3,7 +3,7 @@ jQuery Input Navigation
 
 Retro-like navigation trough input fields using arrow keys.
 
-*** This project is currently under development, to show off your interest star this project ***
+**This project is currently under development, to show off your interest star this project**
 
 Want to contribute?
 -------------------
