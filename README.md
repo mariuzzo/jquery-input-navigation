@@ -16,7 +16,16 @@ We use the "forking with feature branches" workflow, to start follow these simpl
 
 What to contribute?
 
-Ladies and gentleman, I introduce you the **roadmap**:
+Ladies and gentleman, I introduce you the **list of features to be implemented for the first release**:
 
- - Write the basic set of supported features.
- - Define the DATA-API.
+ - **Navigate through input fields using the arrow keys.**
+    - Create the logic to make the `key-down` for moving forward to the next input field, and the `key-up` for moving back.
+    - Create a boolean option named `cyclic` that will indicates if the navigation trough input fields will be cyclic (being in the last input field and moving to next will navigate to the first one). Example of use: `$('form').inputNavigation({ cyclic: true })`. The default value will false.
+    
+ - **Manual navigation through input fields using methods.**
+ 	- Create a method for allowing manual navigation to the next input field. That method should be called as follow: `$('form').inputNavigation('next')`.
+    - Create a method for allowing manual navigation to the previous input field. That method should be called as follow: `$('form').inputNavigation('prev')`.
+
+ - **Create the data-API support.**
+    - To activate the input navigation in any DOM node use the attribute: `data-input-navigation`.
+    - To set options: `data-input-navigation="{ cyclic: true }"`.
