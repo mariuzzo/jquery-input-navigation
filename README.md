@@ -15,6 +15,7 @@ We use the "forking with feature branches" workflow, to start follow these simpl
  3. Finally, create a pull request to be reviewed then merged.
 
 What to contribute?
+-------------------
 
 Ladies and gentleman, I introduce you the **list of features to be implemented for the first release**:
 
