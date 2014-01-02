@@ -1,5 +1,5 @@
-Input Navigation
-================
+jQuery Input Navigation
+=======================
 
 Retro-like navigation trough HTML input fields using arrow keys.
 
