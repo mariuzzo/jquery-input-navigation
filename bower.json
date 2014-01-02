@@ -1,12 +1,12 @@
 {
-    "name": "input-navigation",
+    "name": "jquery-input-navigation",
     "version": "1.0.0",
-    "homepage": "https://github.com/rmariuzzo/input-navigation",
+    "homepage": "https://github.com/mariuzzo/jquery-input-navigation",
     "authors": [
         "Rubens Mariuzzo <rubens@mariuzzo.com>"
     ],
     "description": "Retro-like navigation trough input fields using arrow keys.",
-    "main": "src/input-navigation.js",
+    "main": "src/jquery.input-navigation.js",
     "keywords": [
         "input",
         "navigation",
@@ -22,7 +22,7 @@
         "test",
         "tests"
     ],
-    "devDependencies": {
+    "dependencies": {
         "jquery": "~2.0"
     }
 }
