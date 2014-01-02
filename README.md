@@ -10,9 +10,7 @@ Want to contribute?
 
 We use the "forking with feature branches" workflow, to start follow these simple instructions. If you're not familiar with this workflow read this well written article ["Our git workflow – Forks with feature branches" ](http://x-team.com/2013/09/our-git-workflow-forks-with-feature-branches/) by [Kamil Ogórek](https://github.com/kamilogorek).
 
- 1. Fork this repository.
- 2. Create a new branch from develop, then code.
- 3. Finally, create a pull request to be reviewed then merged.
+**[Step by step: Git Worklow](https://github.com/mariuzzo/jquery-input-navigation/wiki/Git-Workflow)**
 
 What to contribute?
 -------------------
