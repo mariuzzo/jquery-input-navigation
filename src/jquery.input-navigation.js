@@ -1,9 +1,7 @@
 /* global jQuery, console */
+'use strict';
 
 (function($) {
-
-    'use strict';
-
     var defaults = {
         cyclic: false,
         inputs: ':text',
@@ -11,6 +9,12 @@
             next: 40,
             prev: 38
         }
+    };
+    
+    //TODO: What's the best place to put this custom function?
+    //http://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/
+    var toType = function(obj) {
+        return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
     };
 
     // Constructor //
@@ -95,9 +99,10 @@
         return this.each(function() {
             var $this = $(this);
             var instance = $this.data('inputNavigation');
+            
             // Create or use existing instance.
-            if (!instance) {
-                $this.data('inputNavigation', (instance = new InputNavigation(this, options)));
+            if (!instance || toType(instance) !== InputNavigation) {
+                $this.data('inputNavigation', (instance = new InputNavigation(this, options || instance )));
             }
             // Invoke method.
             if (typeof options === 'string' && $.isFunction(instance[options])) {
@@ -106,5 +111,10 @@
             }
         });
     };
-
+    
 })(jQuery);
+
+// Automatic attachment of the plugin on every DOM element that meets the attribute criteria
+jQuery(function(){
+    jQuery('[data-input-navigation]').inputNavigation();
+});

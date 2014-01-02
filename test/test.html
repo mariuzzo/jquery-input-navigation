@@ -7,7 +7,8 @@
 	<script src="../src/jquery.input-navigation.js"></script>
 </head>
 <body>
-	<form>
+	<!-- In order for the browser to parse this automatically, it must be a well-formed JSON -->
+    <form data-input-navigation='{"cyclic": "true"}'>
 		<input type="text" value="value 1">
         <br>
 		<input type="text" value="value 2">
