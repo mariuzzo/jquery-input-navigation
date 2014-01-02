@@ -15,7 +15,7 @@ We use the "forking with feature branches" workflow, to start follow these simpl
 What to contribute?
 -------------------
 
-Ladies and gentleman, I introduce you the **list of features to be implemented for the first release**:
+Ladies and gentlemen, I introduce you the **list of features to be implemented for the first release**:
 
  - **Navigate through input fields using the arrow keys.**
     - Create the logic to make the `key-down` for moving forward to the next input field, and the `key-up` for moving back.

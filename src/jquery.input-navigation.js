@@ -40,10 +40,10 @@
         // Handle input elements navigation by keybindings.
         self.$container.on('keydown.input-navigation.navigation', self.$options.inputs, function(event) {
             console.log(event.which);
-            if (event.which == self.$options.keybindings.next) {
+            if (event.which === self.$options.keybindings.next) {
                 event.preventDefault();
                 self.next();
-            } else if (event.which == self.$options.keybindings.prev) {
+            } else if (event.which === self.$options.keybindings.prev) {
                 event.preventDefault();
                 self.prev();
             }
@@ -61,7 +61,7 @@
     InputNavigation.prototype.next = function() {
         var $inputs = this.$container.find(this.$options.inputs);
         var index = $inputs.index(this.current()) + 1;
-        if (this.$options.cyclic && index == $inputs.length) {
+        if (this.$options.cyclic && index === $inputs.length) {
             index = 0;
         }
         $inputs.eq(index).trigger('focus').trigger('select');
