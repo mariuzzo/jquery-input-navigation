@@ -1,0 +1,28 @@
+{
+    "name": "input-navigation",
+    "version": "1.0.0",
+    "homepage": "https://github.com/rmariuzzo/input-navigation",
+    "authors": [
+        "Rubens Mariuzzo <rubens@mariuzzo.com>"
+    ],
+    "description": "Retro-like navigation trough input fields using arrow keys.",
+    "main": "src/input-navigation.js",
+    "keywords": [
+        "input",
+        "navigation",
+        "retro",
+        "form",
+        "jquery"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "jquery": "~2.0"
+    }
+}
