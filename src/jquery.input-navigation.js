@@ -1,4 +1,4 @@
-/* global jQuery, console */
+/* global jQuery, console, document */
 'use strict';
 
 (function($) {
@@ -18,7 +18,6 @@
     };
 
     // Constructor //
-
     /**
      * Construct a new InputNavigation object.
      *
@@ -112,9 +111,8 @@
         });
     };
     
+    $(document).on('ready.input-navigation.data-api', function(){
+        $('[data-input-navigation]').inputNavigation();
+    });
+    
 })(jQuery);
-
-// Automatic attachment of the plugin on every DOM element that meets the attribute criteria
-jQuery(function(){
-    jQuery('[data-input-navigation]').inputNavigation();
-});
