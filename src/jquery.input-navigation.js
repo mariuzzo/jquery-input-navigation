@@ -11,12 +11,6 @@
         }
     };
     
-    //TODO: What's the best place to put this custom function?
-    //http://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/
-    var toType = function(obj) {
-        return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
-    };
-
     // Constructor //
     /**
      * Construct a new InputNavigation object.
@@ -100,7 +94,7 @@
             var instance = $this.data('inputNavigation');
             
             // Create or use existing instance.
-            if (!instance || toType(instance) !== InputNavigation) {
+            if (!instance || !(instance instanceof InputNavigation)) {
                 $this.data('inputNavigation', (instance = new InputNavigation(this, options || instance )));
             }
             // Invoke method.
