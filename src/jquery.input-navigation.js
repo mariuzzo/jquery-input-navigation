@@ -1,9 +1,7 @@
-/* global jQuery, console */
+/* global jQuery, console, document */
+'use strict';
 
 (function($) {
-
-    'use strict';
-
     var defaults = {
         cyclic: false,
         inputs: ':text',
@@ -12,9 +10,8 @@
             prev: 38
         }
     };
-
+    
     // Constructor //
-
     /**
      * Construct a new InputNavigation object.
      *
@@ -95,9 +92,10 @@
         return this.each(function() {
             var $this = $(this);
             var instance = $this.data('inputNavigation');
+            
             // Create or use existing instance.
-            if (!instance) {
-                $this.data('inputNavigation', (instance = new InputNavigation(this, options)));
+            if (!instance || !(instance instanceof InputNavigation)) {
+                $this.data('inputNavigation', (instance = new InputNavigation(this, options || instance )));
             }
             // Invoke method.
             if (typeof options === 'string' && $.isFunction(instance[options])) {
@@ -106,5 +104,9 @@
             }
         });
     };
-
+    
+    $(document).on('ready.input-navigation.data-api', function(){
+        $('[data-input-navigation]').inputNavigation();
+    });
+    
 })(jQuery);
