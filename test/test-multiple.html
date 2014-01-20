@@ -1,28 +1,43 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>jQuery Input Navigation test</title>
-	<script src="../bower_components/jquery/jquery.js"></script>
-	<script src="../src/jquery.input-navigation.js"></script>
+    <meta charset="UTF-8">
+    <title>jQuery Input Navigation test</title>
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../src/jquery.input-navigation.js"></script>
 </head>
+
 <body>
-	<form>
-		<table>
-		    <tr>
-		        <td><input type="text" value="value 1"></td>
-		        <td><input type="text" value="value 2"></td>
-		    </tr>
-		    <tr>
-		        <td><input type="text" value="value 3"></td>
-		        <td><input type="text" value="value 4"></td>
-		    </tr>
-		    <tr>
-		        <td><input type="text" value="value 5"></td>
-		        <td><input type="text" value="value 6"></td>
-		    </tr>
-		</table>
-		
-	</form>
+    <form data-input-navigation='{"cyclic": "true", "multipleDimensions": "true"}'>
+        <table>
+            <tr>
+                <td>
+                    <input data-input-pos-y="0" data-input-pos-x="0" type="text" value="Pos [0,0]">
+                </td>
+                <td>
+                    <input data-input-pos-y="0" data-input-pos-x="1" type="text" value="Pos [0,1]">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input data-input-pos-y="1" data-input-pos-x="0" type="text" value="Pos [1,0]">
+                </td>
+                <td>
+                    <input data-input-pos-y="1" data-input-pos-x="1" type="text" value="Pos [1,1]">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input data-input-pos-y="2" data-input-pos-x="0" type="text" value="Pos [2,0]">
+                </td>
+                <td>
+                    <input data-input-pos-y="2" data-input-pos-x="1" type="text" value="Pos [2,1]">
+                </td>
+            </tr>
+        </table>
+
+    </form>
 </body>
+
 </html>
