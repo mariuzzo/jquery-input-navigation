@@ -15,4 +15,4 @@ We use the "forking with feature branches" workflow, to start follow these simpl
 What to contribute?
 -------------------
 
-Contact [Ahmed](https://github.com/ahmed) or [Rubens](https://github.com/rmariuzzo).
+Contact [Amhed](https://github.com/amhed) or [Rubens](https://github.com/rmariuzzo).
