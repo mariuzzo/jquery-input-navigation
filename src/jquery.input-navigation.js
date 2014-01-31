@@ -7,12 +7,16 @@
         inputs: ':text',
         multipleDimensions: false,
         keybindings: {
-            next: 40,
-            prev: 38,
-            left: 37,
-            up: 38,
-            right: 39,
-            down: 40
+            linear: {
+                next: 40,
+                prev: 38
+            },
+            matrix: {
+                left: 37,
+                up: 38,
+                right: 39,
+                down: 40
+            }
         }
     };
 
@@ -43,30 +47,16 @@
         self.$container.on('keydown.input-navigation.navigation', self.$options.inputs, function (event) {
             console.log(event.which);
 
-            if (self.$options.multipleDimensions) {
-                if (event.which === self.$options.keybindings.up) {
-                    event.preventDefault();
-                    self.up();
-                } else if (event.which === self.$options.keybindings.down) {
-                    event.preventDefault();
-                    self.down();
-                } else if (event.which === self.$options.keybindings.left) {
-                    event.preventDefault();
-                    self.left();
-                } else if (event.which === self.$options.keybindings.right) {
-                    event.preventDefault();
-                    self.right();
-                }
-            } else {
-                //TODO: This can be converted into a loop instead of binding each one
-                if (event.which === self.$options.keybindings.next) {
-                    event.preventDefault();
-                    self.next();
-                } else if (event.which === self.$options.keybindings.prev) {
-                    event.preventDefault();
-                    self.prev();
+            //Improved handling of events. Iterating over elements instead of bunch of IFs
+            var bindings = self.$options.multipleDimensions ? self.$options.keybindings.matrix : self.$options.keybindings.linear;
+            for (var key in bindings) {
+                if (bindings.hasOwnProperty(key) && bindings[key] === event.which) {
+                    console.log(key);
+                    self[key].call(self);
+                    break;
                 }
             }
+
         });
 
         // Track current focused input element.
